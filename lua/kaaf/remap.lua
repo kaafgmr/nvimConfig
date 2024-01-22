@@ -24,6 +24,11 @@ vim.keymap.set("x", "<leader>p", [["_dP]])
 -- copy to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
+vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
+vim.keymap.set("n", "<leader>P", [["+P]])
+
+--select everything
+vim.keymap.set("n", "<C-a>", ":%y+")
 
 -- deleting to void register
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
