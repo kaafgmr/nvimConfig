@@ -7,7 +7,7 @@ vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
-
+-- delete line below
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- half page jump maintaining the cursor in the middle of the screen
@@ -19,22 +19,13 @@ vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
 -- paste word without loosing what you copied before
-vim.keymap.set("x", "<leader>p", [["_dP]])
+vim.keymap.set("x", "<leader>dp", [["_dP]])
 
--- copy to system clipboard
+-- copy/paste to system clipboard
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set({"n", "v"}, "<leader>p", [["+p]])
 vim.keymap.set("n", "<leader>P", [["+P]])
-
---select everything
-vim.keymap.set("n", "<C-a>", ":%y+")
-
--- deleting to void register
-vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
-
-vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
-
 
 --quick fix navigation
 vim.keymap.set("n", "<C-k>", "<cmd>cnext<CR>zz")
@@ -45,9 +36,13 @@ vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 -- replace the word your on top of
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 
-
-vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
-
+-- shout out file
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- move between neovim windows
+vim.keymap.set("n", "<leader>h", "<C-w>h")
+vim.keymap.set("n", "<leader>j", "<C-w>j")
+vim.keymap.set("n", "<leader>k", "<C-w>k")
+vim.keymap.set("n", "<leader>l", "<C-w>l")

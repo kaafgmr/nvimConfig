@@ -1,30 +1,34 @@
-vim.opt.nu = true
-vim.opt.relativenumber = true
+local opt = vim.opt
 
-vim.opt.tabstop = 4
-vim.opt.softtabstop = 4
-vim.opt.shiftwidth = 4
-vim.opt.expandtab = true
+opt.nu = true
+opt.relativenumber = true
 
-vim.opt.smartindent = true
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
+opt.expandtab = true
 
-vim.opt.wrap = false
+opt.smartindent = true
 
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = os.getenv("NVIMUNDODIR")
-vim.opt.undofile = true
+opt.wrap = false
 
-vim.opt.hlsearch = false
-vim.opt.incsearch = true
+opt.swapfile = false
+opt.backup = false
+opt.undodir = os.getenv("NVIMUNDODIR")
+opt.undofile = true
 
-vim.opt.termguicolors = true
+opt.hlsearch = false
+opt.incsearch = true
 
-vim.opt.scrolloff = 8
-vim.opt.signcolumn = "yes"
-vim.opt.isfname:append("@-@")
+opt.termguicolors = true
 
-vim.opt.updatetime = 250
-vim.opt.timeoutlen = 300
+opt.scrolloff = 8
+opt.signcolumn = "yes"
+opt.isfname:append("@-@")
 
-vim.opt.colorcolumn = "80"
+opt.updatetime = 250.
+opt.timeoutlen = 300
+
+opt.colorcolumn = "80"
+
+opt.inccommand = "split"
