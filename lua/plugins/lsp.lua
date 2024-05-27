@@ -43,6 +43,7 @@ return {
     {
         'neovim/nvim-lspconfig',
         config = function ()
+            require('lsp-zero').extend_lspconfig()
             require'lspconfig'.lua_ls.setup({})
         end
     },
@@ -53,6 +54,11 @@ return {
 
             require("luasnip.loaders.from_vscode").lazy_load()
 
+        end
+    },
+    {
+        'hrsh7th/nvim-cmp',
+        config =function ()
             local cmp = require('cmp')
             local cmp_select = {behavior = cmp.SelectBehavior.Select}
             local cmp_mappings = cmp.mapping.preset.insert({
@@ -80,9 +86,6 @@ return {
     },
     {
         'hrsh7th/cmp-nvim-lsp'
-    },
-    {
-        'hrsh7th/nvim-cmp'
     },
     {
         'saadparwaiz1/cmp_luasnip'
