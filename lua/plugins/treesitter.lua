@@ -1,7 +1,7 @@
 return {
     "nvim-treesitter/nvim-treesitter",
     build = ":TSUpdate",
-    configure =function ()
+    config =function ()
         require 'nvim-treesitter.install'.compilers = { vim.fn.getenv("CC"), "gcc, clang" }
 
         require'nvim-treesitter.configs'.setup {
